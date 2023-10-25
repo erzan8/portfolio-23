@@ -4,7 +4,7 @@ const Avatar = () => {
   return (
     <div className="hidden xl:flex xl:max-w-none">
       <Image
-        src={"/avatargc-reworked.png"}
+        src={"/avatargc-reworked.webp"}
         width={700}
         height={700}
         alt=""

@@ -4,7 +4,7 @@ const TopLeftImg = () => {
   return (
     <div>
       <Image
-        src="/top-left-img.png"
+        src="/top-left-img.webp"
         width={400}
         height={400}
         alt=""
