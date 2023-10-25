@@ -3,11 +3,13 @@ import "../styles/globals.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Transition from "@/components/Transition";
+import MetaHead from "@/components/MetaHead";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
     <Layout>
+      <MetaHead />
       <AnimatePresence mode="wait">
         <motion.div key={router.route} className={"h-full"}>
           <Transition />

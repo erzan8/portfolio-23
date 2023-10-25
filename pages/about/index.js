@@ -128,24 +128,37 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-full py-32 text-center xl:text-left overflow-auto">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      className="h-full py-32 text-center xl:text-left overflow-y-auto overflow-x-hidden"
+    >
       <Circles />
       <div className="container mx-auto h-fit md:h-full flex flex-col justify-center items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center min-w-[50%]  z-[1]">
           <motion.h2
-            variants={fadeIn("right", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.2, duration: 0.6 },
+              },
+            }}
             className="h2"
           >
             Développeur <span className="text-accent">polyvalent</span>
           </motion.h2>
           <motion.p
-            variants={fadeIn("right", 0.4)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.4, duration: 0.6 },
+              },
+            }}
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
             Habitué aux principaux frameworks frontend, et backend dans une
@@ -156,10 +169,14 @@ const About = () => {
             Cloud et au Devops. <br />
           </motion.p>
           <motion.div
-            variants={fadeIn("right", 0.6)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.6, duration: 0.6 },
+              },
+            }}
             className="h2 flex xl:justify-start justify-center  gap-x-6 pb-6"
           >
             <div className="relative flex-row justify-start items-center gap-x-4">
@@ -183,10 +200,14 @@ const About = () => {
           </motion.div>
         </div>
         <motion.div
-          variants={fadeIn("left", 0.2)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
+          variants={{
+            hidden: { opacity: 0, x: 20 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.2, duration: 0.6 },
+            },
+          }}
           className="w-full mb:w-[50%]"
         >
           {/*Tabs*/}
@@ -208,10 +229,14 @@ const About = () => {
           </div>
 
           <motion.div
-            variants={fadeIn("left", 0.6)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
+            variants={{
+              hidden: { opacity: 0, x: 20 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.4, duration: 0.6 },
+              },
+            }}
             className="py-3 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start"
           >
             {aboutData[index].info.map((item, itemIndex) => {
@@ -231,10 +256,8 @@ const About = () => {
                     {/*Icons*/}
                     {item.icons?.map((icon, itemIndex) => {
                       return (
-                        <div className="group relative">
-                          <div className="text-2xl" key={itemIndex}>
-                            {icon.icon}
-                          </div>
+                        <div key={itemIndex} className="group relative">
+                          <div className="text-2xl">{icon.icon}</div>
                           <div className="opacity-0 absolute hidden md:flex text-xs font-extralight text-center group-hover:opacity-100 transition-all duration-200">
                             {icon.title}
                           </div>
@@ -248,7 +271,7 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

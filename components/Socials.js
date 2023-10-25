@@ -11,8 +11,9 @@ const Socials = () => {
         <RiLinkedinBoxFill />
       </Link>
       <Link
-        href=""
+        href="CV-CARRON-Guilhem-2023.pdf"
         className="font-medium text-xl xl:text-2xl hover:text-accent transition-all duration-300"
+        target="_blank"
       >
         CV
       </Link>
