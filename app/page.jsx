@@ -1,5 +1,8 @@
+"use client";
 import Avatar from "@/components/Avatar";
 import ParticlesContainer from "@/components/ParticlesContainer";
+// import Avatar from "@/components/Avatar";
+// import ParticlesContainer from "@/components/ParticlesContainer";
 import { motion } from "framer-motion";
 import Link from "next/link";
 const skills = ["React", "Node", "Angular", "NextJs", "NestJs", "Typescript"];

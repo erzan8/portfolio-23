@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 const distanceStart = "100%";
 const distanceEnd = "0%";

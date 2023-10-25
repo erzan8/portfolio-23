@@ -1,6 +1,6 @@
 // icons
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import {
   HiHome,
   HiUser,
@@ -23,8 +23,8 @@ export const navData = [
 ];
 
 const Nav = () => {
-  const router = useRouter();
-  const pathname = router.pathname;
+  const router = usePathname();
+
   return (
     <nav
       className={`flex flex-col items-center xl:justify-center xl:mt-8 gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen`}
@@ -38,7 +38,7 @@ const Nav = () => {
               href={link.path}
               key={index}
               className={`${
-                link.path === pathname && "text-accent"
+                link.path === router && "text-accent"
               } relative flex items-center group hover:text-accent transition-all duration-300`}
             >
               <div className="absolute pr-14 right-1 hidden xl:group-hover:flex">

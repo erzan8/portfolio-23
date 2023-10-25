@@ -1,10 +1,11 @@
 {
   "moduleResolution": "node",
   "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
+    "baseUrl": "app/",
     "paths": {
-      "@/*": ["*"]
+      "@/styles/*": ["../styles/*"],
+      "@/components/*": ["../components/*"],
+      "@/*": ["../*"]
     }
   },
   "exclude": ["node_modules"]

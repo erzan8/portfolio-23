@@ -1,6 +1,5 @@
+"use client";
 /* eslint-disable react/jsx-key */
-// icons
-import Avatar from "@/components/Avatar";
 import Circles from "@/components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
@@ -128,7 +127,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-full py-32 text-center xl:text-left overflow-auto">
+    <div className="h-full py-32 text-center xl:text-left overflow-y-auto overflow-x-hidden">
       <Circles />
       <div className="container mx-auto h-fit md:h-full flex flex-col justify-center items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center min-w-[50%]  z-[1]">
@@ -231,10 +230,8 @@ const About = () => {
                     {/*Icons*/}
                     {item.icons?.map((icon, itemIndex) => {
                       return (
-                        <div className="group relative">
-                          <div className="text-2xl" key={itemIndex}>
-                            {icon.icon}
-                          </div>
+                        <div key={itemIndex} className="group relative">
+                          <div className="text-2xl">{icon.icon}</div>
                           <div className="opacity-0 absolute hidden md:flex text-xs font-extralight text-center group-hover:opacity-100 transition-all duration-200">
                             {icon.title}
                           </div>
