@@ -7,6 +7,7 @@ const Socials = () => {
         href="http://www.linkedin.com/in/guilhem-carron"
         className="hover:text-accent transition-all duration-300"
         target="_blank"
+        aria-label="Linkedin"
       >
         <RiLinkedinBoxFill />
       </Link>
@@ -14,6 +15,7 @@ const Socials = () => {
         href="CV-CARRON-Guilhem-2023.pdf"
         className="font-medium text-xl xl:text-2xl hover:text-accent transition-all duration-300"
         target="_blank"
+        aria-label="Télécharger le CV"
       >
         CV
       </Link>

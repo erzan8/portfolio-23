@@ -3,18 +3,25 @@ import "../styles/globals.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Transition from "@/components/Transition";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <Layout>
-      <AnimatePresence mode="wait">
-        <motion.div key={router.route} className={"h-full"}>
-          <Transition />
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
-    </Layout>
+    <>
+      <Head>
+        <title>Portfolio Développeur - Guilhem Carron</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Layout>
+        <AnimatePresence mode="wait">
+          <motion.div key={router.route} className={"h-full"}>
+            <Transition />
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
+      </Layout>
+    </>
   );
 }
 

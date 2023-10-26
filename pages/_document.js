@@ -5,11 +5,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="fr">
-        <Head title="Portfolio Développeur - Guilhem Carron">
+        <Head>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="manifest" href="/manifest.json" />
-          <title>Portfolio Développeur - Guilhem Carron</title>
           <meta
             name="description"
             content="Développeur fullstack javascript, disponible pour tous vos projets d'application web."
