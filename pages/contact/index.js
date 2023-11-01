@@ -10,7 +10,7 @@ const Contact = () => {
           </h2>
           <form
             className="flex-1 flex flex-col gap-6 w-full max-w-[700px] mx-auto"
-            method="POST"
+            method="GET"
             data-netlify="true"
           >
             <div className="flex gap-x-6 w-full">
@@ -22,12 +22,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <input
-              type="text"
-              placeholder="Subject"
-              className="input"
-              required
-            />
+            <input type="text" placeholder="Objet" className="input" required />
             <textarea
               placeholder="Message"
               className="textarea"

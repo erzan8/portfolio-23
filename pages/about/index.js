@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 // icons
 import Avatar from "@/components/Avatar";
 import Circles from "@/components/Circles";

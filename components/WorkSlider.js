@@ -1,65 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import projects from "@/data/projects.json";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import {
-  RxPencil2,
-  RxDesktop,
-  RxRocket,
-  RxArrowTopRight,
-  RxMobile,
-} from "react-icons/rx";
+import { RxGithubLogo, RxExternalLink } from "react-icons/rx";
 import { IoIosBuild } from "react-icons/io";
 import { BsArrowRight } from "react-icons/bs";
 import { Pagination } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
-
-// data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-      ],
-    },
-  ],
-};
 
 const WorkSlider = () => {
   return (
@@ -70,35 +19,62 @@ const WorkSlider = () => {
       }}
       freeMode={true}
       modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[480px] sm:h-[450px]"
     >
-      {workSlides.slides.map((slide, index) => {
+      {projects.map((project, index) => {
         return (
-          <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
-              {slide.images.map((image, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
-                  >
-                    <div className="flex items-center justify-center relative overflow-hidden">
-                      <Image src={image.path} width={500} height={300} alt="" />
+          <SwiperSlide
+            key={index}
+            className="bg-[#0d1726] rounded-lg p-5 group "
+          >
+            <div className="flex flex-col justify-center ">
+              <Image
+                src={`/projects/${project.image}`}
+                width={400}
+                height={300}
+                alt=""
+                className="mb-3"
+              />
+              <p className="mb-2 text-xl text-left text-white">
+                {project.title}
+              </p>
+              <div className="flex mb-3 gap-1 flex-wrap">
+                {project.technos.map((techno, index) => {
+                  return (
+                    <div
+                      className="w-fit border-solid border-white border-[1px] rounded-full px-2 text-sm font-extralight"
+                      key={index}
+                    >
+                      {techno}
                     </div>
-                    {/*Overlay*/}
-                    <div className="absolute inset-0 bg-gradient-to-l via-[#e838cc]  to-[#4a22bd] from-transparent opacity-0 group-hover:opacity-80 transition-all duration-500">
-                      <h3>Super projet</h3>
-                      <p>On adore</p>
-                      <Link href="" className="cursor-pointer">
-                        Lien github
-                      </Link>
-                      <Link href="" className="cursor-pointer">
-                        Lien site
-                      </Link>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+              <p className="leading-normal mb-2">{project.desc}</p>
+
+              <div className="absolute inset-0 bg-gradient-to-l bg-[#0d1726] from-transparent opacity-0 group-hover:opacity-90 transition-all duration-500 h-full rounded-lg">
+                {/*Overlay*/}
+                <div className="flex justify-center items-center gap-x-3 h-full">
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      className="cursor-pointer btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent bg-[#0d1726] group"
+                    >
+                      <RxGithubLogo className="text-2xl mr-2" />
+                      Voir le Git
+                    </Link>
+                  )}
+                  {project.url && (
+                    <Link
+                      href={project.url}
+                      className="cursor-pointer btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden bg-[#0d1726] hover:border-accent group"
+                    >
+                      <RxExternalLink className="text-2xl mr-2" />
+                      Voir le site
+                    </Link>
+                  )}
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         );

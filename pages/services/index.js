@@ -1,7 +1,6 @@
 import Bulb from "@/components/Bulb";
 import Circles from "@/components/Circles";
 import ServiceSlider from "@/components/ServiceSlider";
-import { fadeIn } from "@/variants";
 
 import { motion } from "framer-motion";
 
@@ -42,7 +41,8 @@ const Services = () => {
               }}
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              mes feiuohf snhbqsuc ebncskld cerbhnce ooeznc oeàçe ocddjs eeo
+              Voici les services que je suis à même de réaliser pour faire
+              avancer votre projet.
             </motion.p>
           </div>
           <motion.div

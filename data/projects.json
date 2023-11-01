@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Ecolyo",
+    "desc": "Projet réalisé en mission chez Sopra Steria pour la Métropole de Lyon en contexte Agile. Participation au développement de la PWA, du backoffice, du site vitrine et des connecteurs EDF/GRDF/EGL.",
+    "url": "https://ecolyo.com/",
+    "image": "mockup-ecolyo.png",
+    "technos": ["React", "Typescript", "CouchDB", "Node", "D3", "Cozy"],
+    "github": "https://forge.grandlyon.com/web-et-numerique/factory/llle_project"
+  },
+  {
+    "title": "Somfy Help Me",
+    "desc": "Projet réalisé en mission chez Sopra Steria pour Somfy en contexte Agile. Maintenance et évolution de l'application hybride ainsi que du backoffice.",
+    "url": "https://www.somfypro.fr/assistance/services/help-me",
+    "image": "somfy-logo.jpg",
+    "technos": ["Angular", "Ionic", "Cordova", "AWS"]
+  },
+
+  {
+    "title": "Res'in",
+    "desc": "Projet réalisé en mission chez Sopra Steria pour la Métropole de Lyon en contexte Agile. Participation au développement et aux évolutions de la PWA.",
+    "url": "https://resin.grandlyon.com/",
+    "image": "mockup-resin.png",
+    "technos": [
+      "Angular",
+      "Typescript",
+      "NestJs",
+      "Node",
+      "MongoDb",
+      "ElasticSearch"
+    ],
+    "github": "https://forge.grandlyon.com/web-et-numerique/factory/pamn_plateforme-des-acteurs-de-la-mediation-numerique"
+  },
+  {
+    "title": "Fitlift",
+    "desc": "Projet fictif réalisé en PHP.",
+    "url": "https://resin.grandlyon.com/",
+    "image": "fitlift.png",
+    "technos": ["PHP", "Javascript", "HTML", "CSS"],
+    "github": "https://github.com/erzan8/fitlift"
+  },
+  {
+    "title": "Lisis Conseil",
+    "desc": "Projet réalisé en Freelance pour le client Lisis Conseil avec Wordpress.",
+    "url": "https://lisis-conseil.com/",
+    "image": "mockup-lisis.png",
+    "technos": ["Wordpress", "Elementor", "PHP", "Javascript"]
+  },
+  {
+    "title": "Pure Habitat",
+    "desc": "Projet réalisé en stage chez l'entreprise \"Les derniers seront les premiers\" avec Wordpress.",
+    "url": "https://www.promessens.fr/?from=pure-habitat.fr",
+    "image": "mockup-pure-habitat.png",
+    "technos": ["Wordpress", "Elementor", "PHP", "Javascript"]
+  },
+  {
+    "title": "My Art Event",
+    "desc": "Projet réalisé en stage chez l'entreprise \"Les derniers seront les premiers\" avec Wordpress.",
+    "url": "https://www.my-art-event.com/",
+    "image": "mockup-my-art-event.png",
+    "technos": ["Wordpress", "Elementor", "PHP", "Javascript"]
+  }
+]
