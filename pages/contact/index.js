@@ -10,7 +10,7 @@ const Contact = () => {
           </h2>
           <form
             className="flex-1 flex flex-col gap-6 w-full max-w-[700px] mx-auto"
-            method="GET"
+            method="POST"
             data-netlify="true"
           >
             <div className="flex gap-x-6 w-full">
@@ -28,7 +28,10 @@ const Contact = () => {
               className="textarea"
               required
             ></textarea>
-            <button className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
+            <button
+              type="submit"
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+            >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 J&apos;envoie !
               </span>

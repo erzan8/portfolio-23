@@ -33,7 +33,7 @@
   {
     "title": "Fitlift",
     "desc": "Projet fictif réalisé en PHP.",
-    "url": "https://resin.grandlyon.com/",
+    "url": "https://gcsandr.cluster029.hosting.ovh.net/fitlift-master/",
     "image": "fitlift.png",
     "technos": ["PHP", "Javascript", "HTML", "CSS"],
     "github": "https://github.com/erzan8/fitlift"
