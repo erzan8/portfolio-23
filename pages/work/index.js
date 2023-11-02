@@ -13,8 +13,8 @@ const Work = () => {
       className="h-full py-32 text-center xl:text-left overflow-y-auto overflow-x-hidden flex md:items-center "
     >
       <Circles />
-      <div className="container mx-auto ">
-        <div className="flex flex-col xl:flex-row gap-x-8 items-center  justify-center pb-20 md:pb-0">
+      <div className="container mx-auto h-[max-content]">
+        <div className="flex flex-col xl:flex-row gap-x-8 items-center  justify-center ">
           {/*text*/}
           <div className="text-center flex xl:w-[35vw] flex-col lg:text-left mb-4 xl:mb-0 ">
             <motion.h2
