@@ -10,9 +10,9 @@ const Contact = () => {
           </h2>
           <form
             className="flex-1 flex flex-col gap-6 w-full max-w-[700px] mx-auto"
-            method="GET"
+            method="POST"
+            action={"/success"}
             data-netlify="true"
-            netlify
           >
             <div className="flex gap-x-6 w-full">
               <input

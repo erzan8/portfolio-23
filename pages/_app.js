@@ -1,5 +1,8 @@
 import Layout from "@/components/Layout";
-import "../styles/globals.css";
+import "@/styles/globals.css";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Transition from "@/components/Transition";

@@ -1,11 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import projects from "@/data/projects.json";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+
 import { RxGithubLogo, RxExternalLink } from "react-icons/rx";
-import { IoIosBuild } from "react-icons/io";
-import { BsArrowRight } from "react-icons/bs";
 import { Pagination } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
