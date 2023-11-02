@@ -15,16 +15,30 @@ const Contact = () => {
             netlify
           >
             <div className="flex gap-x-6 w-full">
-              <input type="text" placeholder="Nom" className="input" required />
               <input
+                type="text"
+                name="nom"
+                placeholder="Nom"
+                className="input"
+                required
+              />
+              <input
+                name="email"
                 type="email"
                 placeholder="Email"
                 className="input"
                 required
               />
             </div>
-            <input type="text" placeholder="Objet" className="input" required />
+            <input
+              type="text"
+              name="objet"
+              placeholder="Objet"
+              className="input"
+              required
+            />
             <textarea
+              name="message"
               placeholder="Message"
               className="textarea"
               required
