@@ -56,6 +56,7 @@ const WorkSlider = () => {
                     <Link
                       href={project.github}
                       className="cursor-pointer btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent bg-[#0d1726] group"
+                      target="_blank"
                     >
                       <RxGithubLogo className="text-2xl mr-2" />
                       Voir le Git
@@ -65,6 +66,7 @@ const WorkSlider = () => {
                     <Link
                       href={project.url}
                       className="cursor-pointer btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden bg-[#0d1726] hover:border-accent group"
+                      target="_blank"
                     >
                       <RxExternalLink className="text-2xl mr-2" />
                       Voir le site
