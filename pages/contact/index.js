@@ -1,6 +1,7 @@
 import { BsArrowRight } from "react-icons/bs";
-
+import { useRouter } from "next/router";
 const Contact = () => {
+  const router = useRouter();
   return (
     <div className="h-full py-32 overflow-y-auto flex md:items-center">
       <div className="container mx-auto text-center xl:text-left flex items-center justify-center h-[max-content]">
@@ -9,11 +10,12 @@ const Contact = () => {
             Me <span className="text-accent">contacter</span>.
           </h2>
           <form
+            name="contact"
             className="flex-1 flex flex-col gap-6 w-full max-w-[700px] mx-auto"
             method="POST"
-            action={"/success"}
-            data-netlify="true"
+            action={() => router.push("/success")}
           >
+            <input type="hidden" name="ContactForm" value="contact"></input>
             <div className="flex gap-x-6 w-full">
               <input
                 type="text"

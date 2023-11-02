@@ -30,6 +30,7 @@ const WorkSlider = () => {
                 height={300}
                 alt=""
                 className="mb-3"
+                loading="lazy"
               />
               <p className="mb-2 text-xl text-left text-white">
                 {project.title}
