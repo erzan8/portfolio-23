@@ -2,8 +2,8 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <div className="h-full">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+    <div className="h-full py-32 overflow-y-auto flex md:items-center">
+      <div className="container mx-auto text-center xl:text-left flex items-center justify-center h-[max-content]">
         <div className="flex flex-col w-full max-w-[700px]">
           <h2 className="h2 text-center mb-12">
             Me <span className="text-accent">contacter</span>.
