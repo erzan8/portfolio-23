@@ -5,6 +5,9 @@ const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
   turbopack: {},
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = withPWA({
