@@ -1,0 +1,6 @@
+allowBuilds:
+  '@tsparticles/engine': true
+  core-js: true
+  ejs: true
+  sharp: true
+  unrs-resolver: true

@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
-const withPWA = require("next-pwa")({
+const withPWA = require("@ducanh2912/next-pwa").default;
+
+const nextConfig = {
+  reactStrictMode: true,
+  productionBrowserSourceMaps: true,
+  turbopack: {},
+};
+
+module.exports = withPWA({
   dest: "public",
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === "development",
-});
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  productionBrowserSourceMaps: true,
-};
-
-module.exports = withPWA(nextConfig);
+})(nextConfig);

@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import projects from "@/data/projects.json";
 
 import { RxGithubLogo, RxExternalLink } from "react-icons/rx";
-import { Pagination } from "swiper";
+import { Pagination } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 

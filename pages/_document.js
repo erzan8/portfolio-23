@@ -17,6 +17,10 @@ class MyDocument extends Document {
             content="Portfolio - Guilhem Carron"
             key="title"
           />
+          <meta
+            name="facebook-domain-verification"
+            content="99v0d7o4zxwvblnns1m1d69kjyo53h"
+          />
           <meta name="robots" content="index,follow" />
           <meta name="application-name" content="Guilhem Carron" />
           <meta name="apple-mobile-web-app-capable" content="yes" />

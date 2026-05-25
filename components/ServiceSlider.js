@@ -7,7 +7,7 @@ import {
   RxMobile,
 } from "react-icons/rx";
 import { IoIosBuild } from "react-icons/io";
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode, Pagination } from "swiper/modules";
 
 // data
 const serviceData = [
