@@ -15,4 +15,14 @@ module.exports = withPWA({
   register: true,
   skipWaiting: true,
   disable: process.env.NODE_ENV === "development",
+  runtimeCaching: [
+    {
+      urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|ico)$/i,
+      handler: "NetworkFirst",
+      options: {
+        cacheName: "images",
+        expiration: { maxEntries: 64, maxAgeSeconds: 7 * 24 * 60 * 60 },
+      },
+    },
+  ],
 })(nextConfig);
